@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To Do Page</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #f8e2fb;
+                color: #2f2f2f;
+                margin: 0;
+            }
+            .container {
+                max-width: 1300px;
+                margin: 70px;
+                padding: 30px;
+                background-color: white;
+                border: 1px solid black;
+                border-radius: 15px;
+            
+            }
+            nav {
+                text-align: center;
+                padding: 40px;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                background-color: #f8e2fb;
+                transition: 0.3s;
+            }
+            nav:hover {
+                background-color: #f8d1fd;
+            }
+            nav a {
+                margin: 0 8px;
+                text-decoration: none;
+                font-weight: bold;
+                color: purple;
+                transition: 0.3s;
+            }
+            nav a:hover {
+                background-color: #faecfc;
+                color: royalblue;
+            }
+            button {
+                background-color: grey;
+                color: white;
+                border: none;
+                padding: 8px 14px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            button:hover {
+            background-color: lightskyblue;
+            color: #2f2f2f;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 10px;
+                border: 1px solid #f4e8e8;
+                text-align: center;
+            }
+            th {
+                background-color: #ffe8e8;
+            }
+            .check-in {
+                padding: 30px;
+                margin-bottom: 30px;
+                background-color: lavender;
+                border-radius: 12px;
+            }
+            .check-in section {
+                margin-bottom: 20px;
+            }
+            main h3 {
+                margin-top: 1px;
+            }
+            main > div {
+                padding: 20px;
+                margin: 20px 0;
+                border-radius: 10px;
+            }
+            #monday {
+                background-color: #fdf9fd;
+            }
+            #tuesday {
+                background-color: #fdf9fd;
+            }
+            #wednesday {
+                background-color: #fdf9fd;
+            }
+            #thrusday {
+                background-color: #fdf9fd;
+            }
+            #friday {
+                background-color: #fdf9fd;
+            }
+            #saturday {
+                background-color: #fdf9fd;
+            }
+            #sunday {
+                background-color: #fdf9fd;
+            }
+
+            h1 {
+                font-size: 42px;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            header > p {
+                line-height: 1.6;
+            }
+            main h3 {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+            h4 {
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+            #table h2 {
+                font-size: 34px;
+                text-align: center;
+            }
+            #table p {
+                font-style: italic;
+                text-align: center;
+
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <nav>
+        <a href="#monday">Monday</a>
+        <a href="#tuesday">Tuesday</a>
+        <a href="#wednesday">Wednesday</a>
+        <a href="#thrusday">Thursday</a>
+        <a href="#friday">Friday</a>
+        <a href="#saturday">Saturday</a>
+        <a href="#sunday">Sunday</a>
+        </nav>
+
+    <div class="container">
+
+        <section class="info">
+            <header>
+                <h1>Information</h1>
+            </header>
+
+        <form class="check-in" action="" method="POST">
+            <section class="name">
+                <label for="name">Type your full name</label>
+                <input type="text" name="name" id="name">
+            </section>
+            <hr>
+
+            <section class="email">
+            <label for="email">Type your most used email</label>
+            <input type="email" name="email" id="email" required>
+            </section>
+            <hr>
+
+            <section class="password">
+            <label for="pw">Make a strong password</label>
+            <input type="password" name="pw" id="pw" minlength="8" maxlength="15" required>
+            </section>
+            <hr>
+
+            <section class="feel">
+                <label for="feel">How productive did you feel out of 1-10?</label>
+                <h5>1</h5>
+                <input type="range" min="1" max="10" name="feel" id="feel" step="0.5">
+                <h5>10</h5>
+            </section>
+            <hr>
+
+            <section class="achievement">
+                <label for="achieve">What was your best achievement?</label>
+                <input type="text" name="achievement" id="achieve" minlength="10" maxlength="20">
+            </section>
+            <hr>
+
+            <section class="learn">
+                <label for="learn">What did you learn?</label>
+                <textarea name="learn" id="learn" rows="3" cols="50" placeholder="type..."></textarea>
+            </section>
+            <hr>
+
+            <section class="week">
+                <p>How was your week?</p>
+                <label for="great">Great</label>
+                <input type="radio" name="week" id="great" value="Great">
+
+                <label for="very-good">Very Good</label>
+                <input type="radio" name="week" id="very-good" value="Very-Good">
+
+                <label for="good">Good</label>
+                <input type="radio" name="week" id="good" value="Good">
+
+                <label for="okay">Okayish</label>
+                <input type="radio" name="week" id="okay" value="okayish">
+
+            </section>
+
+            <section class="submition">
+            <input type="submit">
+            </section>
+            <hr>
+
+        </form>
+        </section>
+
+        <header>
+        <h1>Daily Tracker</h1>
+        <p><span>I will be tracking my page here daily for one week with everything I did:</span><br><br> 1. Every certificate I got<br>
+2. Every workout I got through<br>
+3. Every skill I learned<br>
+4. Every achievement I unlocked<br>
+5. What I felt, and so on<br></p>
+       <hr>
+       </header>
+
+       <aside>
+        <p><em>These pages are made for personal use and learning purpose only.</em></p>
+       </aside>
+
+    <main>
+       <div id="monday">
+        <h3>Day 1(MONDAY)</h3>
+        <p>Starting with the first day of the week, Monday, I did:<br><br></p>
+        <ul>
+            <li>Did 20 minutes of CS50P lectures.</li>
+            <li>I completed one hour of the international relations course</li>
+            <li>Did 30 minutes of Spanish.</li>
+            <li>Did 75 minutes of Chinese and completed 
+                <ol>
+                    <li>task 2[30 min]</li>
+                    <li>task 3[20 min]</li>
+                    <li>task 4[25 min]</li>
+                </ol>
+            </li>
+            <li>Do two hundred crunches</li>
+            <li>As for feeling, I am feeling okay.</li>
+        </ul>
+        <h4>Conclusion</h4>
+        <p><strong>It was a pretty decent and productive day.</strong></p>
+        <hr>
+
+        </div>
+        <div id="tuesday">
+          <h3>Day 2(TUESDAY)</h3>
+          <p>Since today is day two, it will be the continuation from day one. Let's see what I get on day two, which is Tuesday.<br><br></p>
+          <ul>
+            <li>Did 30 minutes of Spanish.</li>
+            <li>Did 20 minutes of Jiki.</li>
+            <li>Did 25 minutes of learn HTML</li>
+            <li>Tried dancing on Anpanman song for 30 minutes.</li>
+            <li>Did 70 minutes of Financial Literacy for Bharat course.</li>
+            <li>I did 200 crunches.</li>
+            <li>I'm feeling very good.</li>
+          </ul>
+          <h4>Conclusion</h4>
+          <p><strong>Overall, it was a pretty good and productive day. I am feeling good.</strong></p>
+        <hr>
+
+        </div>
+        <div id="wednesday">
+            <h3>Day 3(WEDNESDAY)</h3>
+            <p>Today is Wednesday, the third day of the week, and we will pick up where we left off on day two.</p>
+            <ul>
+                <li>Did 20 minutes of Spanish.</li>
+                <li>Did 35 minutes of JiKi.</li>
+                <li>Did 30 minutes of dancing to the Anpanman song.</li>
+                <li>Did 1 hour and 30 minutes of Chinese <ol>
+                    <li>40 minutes of Task 5</li>
+                    <li>30 minutes of task 6</li>
+                    <li>20 minutes of Task 7</li>
+                </ol>
+                </li>
+                <li>200 crunches</li>
+                <li>As for feeling, I'm feeling great.</li>
+            </ul>
+            <h4>Conclusion</h4>
+            <p><strong>Overall, a productive day, and I'm feeling great.</strong></p>
+        <hr>
+        </div>
+        <div id="thrusday">
+            <h3>Day 4(THRUSDAY)</h3>
+            <p>And now it's finally Thursday, which is day four of the week. Let's begin.</p>
+            <ul>
+                <li>20 minutes of Spanish</li>
+                <li>Got accepted in McKinsey's Forward program.</li>
+                <li>I did 25 minutes of Chinese task 8.</li>
+                <li>Completed a course called Commonwealth Bank Introduction to Cybersecurity. It took me one hour and 40 minutes.</li>
+                <li>Did 200 crunches</li>
+                <li>The forty mins of dancing to Anpanman song</li>
+                <li>20 minutes of jiki.</li>
+                <li>As for feeling, I'm feeling very good.</li>
+            </ul>
+            <h4>Conclusion</h4>
+            <p><strong>It was a very productive and great day.</strong></p>
+        <hr>
+        </div>
+        <div id="friday">
+            <h3>Day 5(FRIDAY)</h3>
+            <p>Here comes story five of the week. It's already Friday. I cannot believe it, but let's go and continue our work.</p>
+            <ul>
+                <li>Did 200 crunches.</li>
+                <li>Did 35 minutes of Spanish.</li>
+                <li>Did thirty minutes of the CS50P lecture 5.</li>
+                <li>Did 40 minutes of Codecademy's Introduction to Semantic HTML</li>
+                <li>Did 20 minutes of Anpanman dancing choreography.</li>
+                <li>As for feeling, I am feeling okay.</li>
+            </ul>
+            <h4>Conclusion</h4>
+            <p><strong>Today was an overall decent day, though I had a little bit of brain fog in the beginning.</strong></p>
+        <hr>
+        </div>
+        <div id="saturday">
+            <h3>Day 6(SATURDAY)</h3>
+            <p>Today I'm not feeling very great, but since it's day six, let's begin.</p>
+            <ul>
+                <li>Today I did 200 crunches.</li>
+                <li>21 minutes of Spanish</li>
+                <li>15 minutes of Chinese task 9</li>
+                <li>As for feeling, I'm not feeling very great.</li>
+            </ul>
+            <h4>Conclusion</h4>
+            <p><strong>To be entirely honest, Today was very avg I wasn't feeling very good. My brain was completely fogged,<br> and my stomach was hurting for some reason.</strong></p>
+
+        <hr>
+        </div>
+        <div id="sunday">
+            <h3>Day 7(SUNDAY)</h3>
+            <p>Since today is the last day of the week and it is Sunday, today is the day we are going to do our robot-making day and<br> catch up on the things that were left from yesterday, because I was not feeling good.</p>
+            <ul>
+                <li>I did 25 minutes of Spanish.</li>
+                <li>I did 30 minutes of an Anpanman dancing video.</li>
+                <li>200 crunches</li>
+                <li>40 minutes of Chinese
+                    <ol>
+                        <li>15 Minutes of task 10</li>
+                        <li>25 minutes of Task 11</li>
+                    </ol>
+                </li>
+                <li>Three hours of, Robot Learning.
+                    <ol>
+                        <li>A traffic light kinda setup using: three LEDs, a breadboard, a resistor, and jumper wires.</li>
+                        <li>Temperature and humidity calculator setup using a DHT11 sensor, OLED screen, one LED, and jumper wires.</li>
+                    </ol>
+                </li>
+                <li>I tried learning editing in DaVinci for 30 minutes.</li>
+                <li>As for feeling, I feel good.</li>
+            </ul>
+            <h4>Conclusion</h4>
+            <p><strong>Today was a pretty decent and productive day. I am feeling great.</strong></p>
+        <hr>
+        </div>
+        <div id="table">
+            <header>
+                <h2>Weekly Summary</h2>
+                <p>Since everything looks like a mess in the above-written style, I just tried to make a clean summary of what I did in a week, as much as I can.</p>
+            </header>
+            <table>
+                <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Exercise</th>
+                    <th scope="col">Spanish</th>
+                    <th scope="col">Chinese</th>
+                    <th scope="col">Dance</th>
+                    <th scope="col">CS50P</th>
+                    <th scope="col">Codecademy</th>
+                    <th scope="col">Jiki</th>
+                    <th scope="col">International Relations</th>
+                    <th scope="col">Robo Learning</th>
+                    <th scope="col">DaVinci</th>
+                    <th scope="col">Financial Literacy</th>
+                    <th scope="col">Feeling</th>
+                    
+
+                </tr>
+
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Monday</th>
+                    <td rowspan="7">200 crunches</td> 
+                    <td rowspan="2">30 mins</td>
+                    <td>75 mins</td>
+                    <td>None</td>
+                    <td>20 mins</td>
+                    <td>None</td>
+                    <td>None</td>
+                    <td>60 mins</td>
+                    <td rowspan="6" colspan="2">None</td>
+                    
+                    <td>None</td>
+                    <td>Okay</td>
+                    
+
+                </tr>
+                <tr>
+                    <th scope="row">Tuesday</th>
+                    <td>None</td>
+                    <td rowspan="2">30 mins</td>
+                    <td rowspan="3">None</td>
+                    <td>25 mins</td>
+                    <td>20 mins</td>
+                    <td rowspan="6">None</td>
+                    <td>70 mins</td>
+                    <td>Very Good</td>
+
+                </tr>
+                <tr>
+                    <th scope="row">Wednesday</th>
+                    <td>20 mins</td>
+                    <td>90 mins</td>
+                    <td rowspan="2">None</td>
+                    <td>35 mins</td>
+                    <td rowspan="5">None</td>
+                    <td>Great</td>
+                
+
+                </tr>
+                <tr>
+                    <th scope="row">Thurusday</th>
+                    <td>25 mins</td>
+                    <td>25 mins</td>
+                    <td>40 mins</td>
+                    <td>20 mins</td>
+                    <td>Very Good</td>
+
+
+                </tr>
+                <tr>
+                    <th scope="row">Friday</th>
+                    <td>35 mins</td>
+                    <td>None</td>
+                    <td>20 mins</td>
+                    <td>30 mins</td>
+                    <td>40 mins</td>
+                    <td rowspan="3">None</td>
+                    <td>Okay</td>
+
+
+                </tr>
+                <tr>
+                    <th scope="row">Saturday</th>
+                    <td>21 mins</td>
+                    <td>15 mins</td>
+                    <td>None</td>
+                    <td rowspan="2">None</td>
+                    <td rowspan="2">None</td>
+                    <td>Not Good</td>
+
+
+                </tr>
+                <tr>
+                    <th scope="row">Sunday</th>
+                    <td>25 mins</td>
+                    <td>40 mins</td>
+                    <td>30 mins</td>
+                    <td>180 mins</td>
+                    <td>30 mins</td>
+                    <td>Good</td>
+
+
+                </tr>
+
+
+                </tbody>
+                <hr>
+
+                <tfoot>
+                    <th scope="row">Weekly total:</th>
+                    <td>1400 crunches</td>
+                    <td>186 mins</td>
+                    <td>245 mins</td>
+                    <td>150 mins</td>
+                    <td>50 mins</td>
+                    <td>65 mins</td>
+                    <td>75 mins</td>
+                    <td>60 mins</td>
+                    <td>180 mins</td>
+                    <td>30 mins</td>
+                    <td>70 mins</td>
+                    <td>Good</td>
+
+                </tfoot>
+            </table>
+        
+        <hr>
+        </div>
+
+        <article>
+        <section class="fun-pic">
+            <figure>
+                <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg" alt="just a dog" width="340" height="400" loading="lazy">
+                <figcaption> Hehe ts is just a happy dog meme, or just imagin<br> happy-happy me after adding everything ik of HTML/CSS<br> to this "to-do" page</figcaption>
+            </figure>
+        </section>
+
+        <section class="random">
+            <figure>
+        <audio autoplay controls>
+            <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+         </audio>
+         <figcaption>That is just a random dog barking. Why did I add it? I have no idea either.</figcaption>
+         </figure>
+         </section>
+        </article>
+
+        </main>
+        
+        <footer>
+            <p><i><strong>1st page | Started on 18 sept 2026 | Finised on 24 sept 2026 |<br> Edited on 28th sept |<br> contant me at: None. why would you contact me anyways, duhh </strong></i></p>
+        </footer>
+
+        </div>
+
+    </body>
+</html>
