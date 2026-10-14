@@ -161,7 +161,8 @@
         <form class="check-in" action="" method="POST">
             <section class="name">
                 <label for="name">Type your full name</label>
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name" placeholder="Type your name..." required>
+                <p id="message"></p>
             </section>
             <hr>
 
@@ -213,7 +214,7 @@
 
             </section>
 
-            <section class="submition">
+            <section class="submition" id="magicBtn">
             <input type="submit">
             </section>
             <hr>
@@ -529,6 +530,23 @@
         </footer>
 
         </div>
+
+        <script>
+            let button = document.getElementById("magicBtn")
+
+            button.addEventListener("click", function () {
+            button.textContent = "You clicked it!"
+            button.body.style.backgroundColor = "lightgreen"                
+            })
+
+            let Btn = document.getElementById("magicBtn")
+
+            Btn.addEventListener("click", function() {
+                name = document.getElementById("name").value;
+                document.getElementById("message").textContent = "Hello, " + name + "! Welcome to my website. I hope you have a great time here.";
+            })
+        </script>
+</body>
 
     </body>
 </html>
