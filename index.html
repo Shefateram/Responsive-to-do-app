@@ -214,8 +214,8 @@
 
             </section>
 
-            <section class="submition" id="magicBtn">
-            <input type="submit">
+            <section class="submition">
+            <input type="submit" id="magicBtn" value="Submit">
             </section>
             <hr>
 
@@ -368,7 +368,9 @@
             <p><strong>Today was a pretty decent and productive day. I am feeling great.</strong></p>
         <hr>
         </div>
-        <div id="table">
+
+        <button id="tableBtn">Show Table</button>
+        <div id="table" style="display:none">
             <header>
                 <h2>Weekly Summary</h2>
                 <p>Since everything looks like a mess in the above-written style, I just tried to make a clean summary of what I did in a week, as much as I can.</p>
@@ -526,7 +528,7 @@
         </main>
         
         <footer>
-            <p><i><strong>1st page | Started on 18 sept 2026 | Finised on 24 sept 2026 |<br> Last Edited on 28th sept |<br> contant me at: None. why would you contact me anyways, duhh </strong></i></p>
+            <p><i><strong>1st page | Started on 18 sept 2026 | Finised on 24 sept 2026 |<br> Last Edited on 9 nov 2026 |<br> contant me at: None. why would you contact me anyways, duhh </strong></i></p>
         </footer>
 
         </div>
@@ -536,7 +538,7 @@
 
             button.addEventListener("click", function () {
             button.textContent = "You clicked it!"
-            button.body.style.backgroundColor = "lightgreen"                
+            button.style.backgroundColor = "lightgreen"                
             })
 
             let Btn = document.getElementById("magicBtn")
@@ -544,6 +546,19 @@
             Btn.addEventListener("click", function() {
                 name = document.getElementById("name").value;
                 document.getElementById("message").textContent = "Hello, " + name + "! Welcome to my website. I hope you have a great time here.";
+            })
+
+            let btnn = document.getElementById("tableBtn")
+            let tableSec = document.getElementById("table")
+
+            btnn.addEventListener("click", function() {
+                if (tableSec.style.display === "none") {
+                    tableSec.style.display = "block"
+                    btnn.textContent = "Hide Table"
+                } else {
+                    tableSec.style.display = "none"
+                    btnn.textContent = "Show Table"
+                }
             })
         </script>
 </body>
