@@ -160,8 +160,8 @@
 
         <form class="check-in" action="" method="POST">
             <section class="name">
-                <label for="name">Type your full name</label>
-                <input type="text" name="name" id="name" placeholder="Type your name..." required>
+                <label for="nameInput">Type your full name</label>
+                <input type="text" name="name" id="nameInput" placeholder="Type your name..." required>
                 <p id="message"></p>
             </section>
             <hr>
@@ -528,7 +528,7 @@
         </main>
         
         <footer>
-            <p><i><strong>1st page | Started on 18 sept 2026 | Finised on 24 sept 2026 |<br> Last Edited on 9 nov 2026 |<br> contant me at: None. why would you contact me anyways, duhh </strong></i></p>
+            <p><i><strong>1st page | Started on 18 sept 2026 | Finised on 24 sept 2026 |<br> Last Edited on 11 nov 2026 |<br> contant me at: None. why would you contact me anyways, duhh </strong></i></p>
         </footer>
 
         </div>
@@ -536,16 +536,24 @@
         <script>
             let button = document.getElementById("magicBtn")
 
-            button.addEventListener("click", function () {
-            button.textContent = "You clicked it!"
-            button.style.backgroundColor = "lightgreen"                
+            button.addEventListener("click", function (e) {
+            button.value = "You clicked it!"
+            button.style.backgroundColor = "purple"                
             })
 
-            let Btn = document.getElementById("magicBtn")
+            let name = document.getElementById("nameInput")
+            let msg = document.getElementById("message")
+            let greet = document.getElementById("magicBtn")
 
-            Btn.addEventListener("click", function() {
-                name = document.getElementById("name").value;
-                document.getElementById("message").textContent = "Hello, " + name + "! Welcome to my website. I hope you have a great time here.";
+            greet.addEventListener("click", function(e) {
+                e.preventDefault()
+                if (name.value === "") {
+                    msg.textContent = "You didn't type your name, please type your name first!"
+                    msg.style.color = "red"
+                } else {
+                    msg.textContent = "Hello, " + name.value + "! Welcome to my page. Hope you have a great time here."
+                    msg.style.color = "purple"
+                }
             })
 
             let btnn = document.getElementById("tableBtn")
@@ -561,7 +569,8 @@
                 }
             })
         </script>
-</body>
+
 
     </body>
+</html>
 </html>
